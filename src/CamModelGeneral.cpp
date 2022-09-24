@@ -37,40 +37,40 @@ CamModelGeneral* CamModelGeneral::GetCamera()
     return mpCamModel;
 }
 
-void CamModelGeneral::SetCamParams()
-{
-    c=1;
-    d=0;
-    e=0;
-    u0=0;
-    v0=0;
-    p=(cv::Mat_<double>(1, 1) << 1);
-    invP=(cv::Mat_<double>(1, 1) << 1);
-    mWFisheye=0;
-    mHFisheye=0;
-    p_deg=1;
-    invP_deg=1;
-    p1=1;
-}
+//void CamModelGeneral::SetCamParams()
+//{
+//    c=1;
+//    d=0;
+//    e=0;
+//    u0=0;
+//    v0=0;
+//    p=(cv::Mat_<double>(1, 1) << 1);
+//    invP=(cv::Mat_<double>(1, 1) << 1);
+//    mWFisheye=0;
+//    mHFisheye=0;
+//    p_deg=1;
+//    invP_deg=1;
+//    p1=1;
+//}
 
-void CamModelGeneral::SetCamParams(double cdeu0v0[], cv::Mat_<double> p_, cv::Mat_<double> invP_)
-{
-    c=cdeu0v0[0];
-    d=cdeu0v0[1];
-    e=cdeu0v0[2];
-    u0=cdeu0v0[3];
-    v0=cdeu0v0[4];
-    p=p_;
-    invP=invP_;
-
-    // initialize degree of polynomials
-    p_deg = (p_.rows > 1) ? p_.rows : p_.cols;
-    invP_deg = (p_.rows > 1) ?  invP_.rows : invP_.cols;
-
-    cde1 = (cv::Mat_<double>(2, 2) << c, d, e, 1.0);
-    p1 = p.at<double>(0);
-    invAffine = c - d*e;
-}
+//void CamModelGeneral::SetCamParams(double cdeu0v0[], cv::Mat_<double> p_, cv::Mat_<double> invP_)
+//{
+//    c=cdeu0v0[0];
+//    d=cdeu0v0[1];
+//    e=cdeu0v0[2];
+//    u0=cdeu0v0[3];
+//    v0=cdeu0v0[4];
+//    p=p_;
+//    invP=invP_;
+//
+//    // initialize degree of polynomials
+//    p_deg = (p_.rows > 1) ? p_.rows : p_.cols;
+//    invP_deg = (p_.rows > 1) ?  invP_.rows : invP_.cols;
+//
+//    cde1 = (cv::Mat_<double>(2, 2) << c, d, e, 1.0);
+//    p1 = p.at<double>(0);
+//    invAffine = c - d*e;
+//}
 
 void CamModelGeneral::SetCamParams(double cdeu0v0[],
         cv::Mat_<double> p_, cv::Mat_<double> invP_, double Iw_, double Ih_, 
@@ -89,6 +89,26 @@ void CamModelGeneral::SetCamParams(double cdeu0v0[],
     p1 = p.at<double>(0);
     invAffine = c - d*e;
 
+    SetCosFovTh(static_cast<float>(camFov_));
+}
+
+// by xiongchao
+void CamModelGeneral::SetCamParams(const cv::Mat &K, const cv::Mat &DistCoef, double Iw_, double Ih_,
+                                   double fx_, double fy_, double cx_, double cy_, double width_, double height_, double camFov_)
+{
+    u0 = K.at<float>(0, 2);
+    v0 = K.at<float>(1, 2);
+    mWFisheye=Iw_; mHFisheye=Ih_;
+    fx=fx_; fy=fy_; cx=cx_; cy=cy_; mWCubeFace=width_; mHCubeFace = height_;
+
+    mK = K;
+    mDistCoef = DistCoef;
+
+    std::vector<float> vCamCalib{mK.at<float>(0, 0), mK.at<float>(1, 1), mK.at<float>(0, 2), mK.at<float>(1, 2),
+            mDistCoef.at<float>(0, 0), mDistCoef.at<float>(1, 0), mDistCoef.at<float>(2, 0), mDistCoef.at<float>(3, 0)};
+    mpCamera = new KannalaBrandt8(vCamCalib);
+
+    // initialize degree of polynomials
     SetCosFovTh(static_cast<float>(camFov_));
 }
 
@@ -153,77 +173,77 @@ CamModelGeneral::eFace CamModelGeneral::TransformRaysToCubemap(float &up, float 
     return UNKNOWN_FACE;
 }
 
-CamModelGeneral::eFace CamModelGeneral::TransformRaysToCubemap(cv::Point2f &pixel, const cv::Vec3f &rigPt)
-{
-    float up, vp;
-    CamModelGeneral::eFace face = TransformRaysToCubemap(up, vp, rigPt);
-    pixel.x = up; pixel.y = vp;
-    return face;
-}
-
-CamModelGeneral::eFace CamModelGeneral::TransformRaysToCubemap(cv::Vec2f &pixel, const cv::Vec3f &rigPt)
-{
-    float up, vp;
-    CamModelGeneral::eFace face = TransformRaysToCubemap(up, vp, rigPt);
-    pixel(0) = up; pixel(1) = vp;
-    return face;
-}
-
-CamModelGeneral::eFace CamModelGeneral::TransformRaysToCubemapFace(float &up, float &vp, const cv::Vec3f &rigPt)
-{
-    const float &x = rigPt(0), &y = rigPt(1), &z = rigPt(2);
-    cv::Vec3f localPt;
-    float &_x = localPt(0), &_y = localPt(1), &_z = localPt(2);
-
-    //choose different face according to (x, y, z)
-    if(z > 0 && x/z <= 1 && x/z >= -1 && y/z <=1 && y/z >= -1)
-    {
-        cvtRigToFaces<float>(localPt, rigPt, FRONT_FACE);
-        up = _x * fx / _z + cx; 
-        vp = _y * fy / _z + cy; 
-        if(up < 0 || up >= mWCubeFace || vp < 0  || vp >= mHCubeFace)
-            return UNKNOWN_FACE;
-        return FRONT_FACE;
-    }
-    else if(x > 0 && y/x <= 1 && y/x >= -1 && z/x <=1 && z/x >= -1)
-    {
-        cvtRigToFaces<float>(localPt, rigPt, RIGHT_FACE);
-        up = _x * fx / _z + cx; 
-        vp = _y * fy / _z + cy; 
-        if(up < 0 || up >= mWCubeFace || vp < 0  || vp >= mHCubeFace)
-            return UNKNOWN_FACE;
-        return RIGHT_FACE;
-    }
-    else if(x < 0 && y/(-x) <= 1 && y/(-x) >= -1 && z/(-x) <=1 && z/(-x) >= -1)
-    {
-        cvtRigToFaces<float>(localPt, rigPt, LEFT_FACE);
-        up = _x * fx / _z + cx; 
-        vp = _y * fy / _z + cy; 
-        if(up < 0 || up >= mWCubeFace || vp < 0  || vp >= mHCubeFace)
-            return UNKNOWN_FACE;
-        return LEFT_FACE;
-    }
-    else if(y > 0 && x/y <= 1 && x/y >= -1 && z/y <=1 && z/y >= -1)
-    {
-        cvtRigToFaces<float>(localPt, rigPt, LOWER_FACE);
-        up = _x * fx / _z + cx; 
-        vp = _y * fy / _z + cy; 
-        if(up < 0 || up >= mWCubeFace || vp < 0  || vp >= mHCubeFace)
-            return UNKNOWN_FACE;
-        return LOWER_FACE;
-    }
-    else if(y < 0 && x/(-y) <= 1 && x/(-y) >= -1 && z/(-y) <=1 && z/(-y) >= -1)
-    {
-        cvtRigToFaces<float>(localPt, rigPt, UPPER_FACE);
-        up = _x * fx / _z + cx; 
-        vp = _y * fy / _z + cy; 
-        if(up < 0 || up >= mWCubeFace || vp < 0  || vp >= mHCubeFace)
-            return UNKNOWN_FACE;
-        return UPPER_FACE;
-    }
-    up = -1; vp = -1;
-    return UNKNOWN_FACE;
-}
+//CamModelGeneral::eFace CamModelGeneral::TransformRaysToCubemap(cv::Point2f &pixel, const cv::Vec3f &rigPt)
+//{
+//    float up, vp;
+//    CamModelGeneral::eFace face = TransformRaysToCubemap(up, vp, rigPt);
+//    pixel.x = up; pixel.y = vp;
+//    return face;
+//}
+//
+//CamModelGeneral::eFace CamModelGeneral::TransformRaysToCubemap(cv::Vec2f &pixel, const cv::Vec3f &rigPt)
+//{
+//    float up, vp;
+//    CamModelGeneral::eFace face = TransformRaysToCubemap(up, vp, rigPt);
+//    pixel(0) = up; pixel(1) = vp;
+//    return face;
+//}
+//
+//CamModelGeneral::eFace CamModelGeneral::TransformRaysToCubemapFace(float &up, float &vp, const cv::Vec3f &rigPt)
+//{
+//    const float &x = rigPt(0), &y = rigPt(1), &z = rigPt(2);
+//    cv::Vec3f localPt;
+//    float &_x = localPt(0), &_y = localPt(1), &_z = localPt(2);
+//
+//    //choose different face according to (x, y, z)
+//    if(z > 0 && x/z <= 1 && x/z >= -1 && y/z <=1 && y/z >= -1)
+//    {
+//        cvtRigToFaces<float>(localPt, rigPt, FRONT_FACE);
+//        up = _x * fx / _z + cx;
+//        vp = _y * fy / _z + cy;
+//        if(up < 0 || up >= mWCubeFace || vp < 0  || vp >= mHCubeFace)
+//            return UNKNOWN_FACE;
+//        return FRONT_FACE;
+//    }
+//    else if(x > 0 && y/x <= 1 && y/x >= -1 && z/x <=1 && z/x >= -1)
+//    {
+//        cvtRigToFaces<float>(localPt, rigPt, RIGHT_FACE);
+//        up = _x * fx / _z + cx;
+//        vp = _y * fy / _z + cy;
+//        if(up < 0 || up >= mWCubeFace || vp < 0  || vp >= mHCubeFace)
+//            return UNKNOWN_FACE;
+//        return RIGHT_FACE;
+//    }
+//    else if(x < 0 && y/(-x) <= 1 && y/(-x) >= -1 && z/(-x) <=1 && z/(-x) >= -1)
+//    {
+//        cvtRigToFaces<float>(localPt, rigPt, LEFT_FACE);
+//        up = _x * fx / _z + cx;
+//        vp = _y * fy / _z + cy;
+//        if(up < 0 || up >= mWCubeFace || vp < 0  || vp >= mHCubeFace)
+//            return UNKNOWN_FACE;
+//        return LEFT_FACE;
+//    }
+//    else if(y > 0 && x/y <= 1 && x/y >= -1 && z/y <=1 && z/y >= -1)
+//    {
+//        cvtRigToFaces<float>(localPt, rigPt, LOWER_FACE);
+//        up = _x * fx / _z + cx;
+//        vp = _y * fy / _z + cy;
+//        if(up < 0 || up >= mWCubeFace || vp < 0  || vp >= mHCubeFace)
+//            return UNKNOWN_FACE;
+//        return LOWER_FACE;
+//    }
+//    else if(y < 0 && x/(-y) <= 1 && x/(-y) >= -1 && z/(-y) <=1 && z/(-y) >= -1)
+//    {
+//        cvtRigToFaces<float>(localPt, rigPt, UPPER_FACE);
+//        up = _x * fx / _z + cx;
+//        vp = _y * fy / _z + cy;
+//        if(up < 0 || up >= mWCubeFace || vp < 0  || vp >= mHCubeFace)
+//            return UNKNOWN_FACE;
+//        return UPPER_FACE;
+//    }
+//    up = -1; vp = -1;
+//    return UNKNOWN_FACE;
+//}
 
 void CamModelGeneral::TransformRaysToTargetFace(float &up, float &vp, const cv::Vec3f &rigPt, const eFace face)
 {
@@ -315,6 +335,10 @@ float CamModelGeneral::GetVectorSigma(const cv::KeyPoint &key, const cv::Vec3f &
     cv::Vec3f vertical(normalCam(0), normalCam(1), 0.0f);
     float u, v;
     GetPosInFace<float>(u, v, key.pt.x, key.pt.y);
+#if 0
+    std::cout << "cx = " << cx << std::endl;
+    std::cout << "cy = " << cy << std::endl;
+#endif
     cv::Vec3f OP(u-cx, v-cy, 0.0f);
     //OO1 and CO1 length in pixels
     float OO1 = OP.dot(epipolar) / cv::norm(epipolar); if(OO1 < 0) OO1 = -OO1;

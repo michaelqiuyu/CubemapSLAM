@@ -60,22 +60,35 @@ System::System(const string &strVocFile, const string &strSettingsFile, const bo
     }
     std::cout << "Vocabulary loaded!" << std::endl << std::endl;
 
-    //read in params
-    int nrpol = fsSettings["Camera.nrpol"];
-    int nrinvpol = fsSettings["Camera.nrinvpol"];
+    double ori_fx = fsSettings["Camera.fx"];
+    double ori_fy = fsSettings["Camera.fx"];
+    double ori_cx = fsSettings["Camera.cx"];
+    double ori_cy = fsSettings["Camera.cy"];
 
-    cv::Mat_<double> poly = cv::Mat::zeros(5, 1, CV_64F);
-    for (int i = 0; i < nrpol; ++i)
-        poly.at<double>(i, 0) = fsSettings["Camera.a" + std::to_string(i)];
-    cv::Mat_<double>  invpoly = cv::Mat::zeros(12, 1, CV_64F);
-    for (int i = 0; i < nrinvpol; ++i)
-        invpoly.at<double>(i, 0) = fsSettings["Camera.pol" + std::to_string(i)];
+    double k1 = fsSettings["Camera.k1"];
+    double k2 = fsSettings["Camera.k2"];
+    double k3 = fsSettings["Camera.k3"];
+    double k4 = fsSettings["Camera.k4"];
 
+    cv::Mat K = (cv::Mat_<float>(3, 3) << ori_fx, 0, ori_cx, 0, ori_fy, ori_cy, 0, 0, 1);
+    cv::Mat DistCoef = (cv::Mat_<float>(4, 1) << k1, k2, k3, k4);
+
+//    //read in params
+//    int nrpol = fsSettings["Camera.nrpol"];
+//    int nrinvpol = fsSettings["Camera.nrinvpol"];
+//
+//    cv::Mat_<double> poly = cv::Mat::zeros(5, 1, CV_64F);
+//    for (int i = 0; i < nrpol; ++i)
+//        poly.at<double>(i, 0) = fsSettings["Camera.a" + std::to_string(i)];
+//    cv::Mat_<double>  invpoly = cv::Mat::zeros(12, 1, CV_64F);
+//    for (int i = 0; i < nrinvpol; ++i)
+//        invpoly.at<double>(i, 0) = fsSettings["Camera.pol" + std::to_string(i)];
+//
     int Iw = (int)fsSettings["Camera.Iw"];
     int Ih = (int)fsSettings["Camera.Ih"];
 
-    double cdeu0v0[5] = { fsSettings["Camera.c"], fsSettings["Camera.d"], fsSettings["Camera.e"],
-        fsSettings["Camera.u0"], fsSettings["Camera.v0"] };
+//    double cdeu0v0[5] = { fsSettings["Camera.c"], fsSettings["Camera.d"], fsSettings["Camera.e"],
+//        fsSettings["Camera.u0"], fsSettings["Camera.v0"] };
     
     //cubemap params
     int nFaceH = fsSettings["CubeFace.h"];
@@ -86,7 +99,9 @@ System::System(const string &strVocFile, const string &strSettingsFile, const bo
     double camFov = fsSettings["Camera.fov"];
 
     //Set camera model
-    CamModelGeneral::GetCamera()->SetCamParams(cdeu0v0, poly, invpoly, Iw, Ih, fx, fy, cx, cy, nFaceW, nFaceH, camFov);
+    // CamModelGeneral::GetCamera()->SetCamParams(cdeu0v0, poly, invpoly, Iw, Ih, fx, fy, cx, cy, nFaceW, nFaceH, camFov);
+    CamModelGeneral::GetCamera()->SetCamParams(K, DistCoef, Iw, Ih, fx, fy, cx, cy, nFaceW, nFaceH, camFov);
+
     std::cout << "finish creating general camera model" << std::endl;
     mnWithFisheyeMask = fsSettings["Camera.withFisheyeMask"];
 

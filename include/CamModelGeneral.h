@@ -29,6 +29,9 @@
 #ifndef CAMMODELGENERAL_H
 #define CAMMODELGENERAL_H
 
+#include "CamModelGeneral.h"
+#include "KannalaBrandt8.h"
+
 #include <opencv2/opencv.hpp>
 #include <vector>
 
@@ -96,32 +99,42 @@ protected:
     float mCosFovTh;
 
 public:
+    // by xiongchao
+    cv::Mat mK;
+    cv::Mat mDistCoef;
+    GeometricCamera* mpCamera;
+
+public:
     //Get camera model
     static CamModelGeneral *GetCamera();
 
-    //Set Camera parameters
-    void SetCamParams();
-
-    void SetCamParams(double cdeu0v0[], cv::Mat_<double> p_, cv::Mat_<double> invP_);
+//    //Set Camera parameters
+//    void SetCamParams();
+//
+//    void SetCamParams(double cdeu0v0[], cv::Mat_<double> p_, cv::Mat_<double> invP_);
 
     void SetCamParams(double cdeu0v0[],
         cv::Mat_<double> p_, cv::Mat_<double> invP_, double Iw_, double Ih_, 
         double fx_, double fy_, double cx_, double cy_, double width_, double height_, double camFov_);
 
+    void SetCamParams(const cv::Mat &K, const cv::Mat &DistCoef, double Iw_, double Ih_,
+                      double fx_, double fy_, double cx_, double cy_, double width_, double height_, double camFov_);
+
+
     ~CamModelGeneral(){}
     // get functions
-    double Get_c() { return c; }
-    double Get_d() { return d; }
-    double Get_e() { return e; }
-
-    double Get_u0() { return u0; }
-    double Get_v0() { return v0; }
+//    double Get_c() { return c; }
+//    double Get_d() { return d; }
+//    double Get_e() { return e; }
+//
+//    double Get_u0() { return u0; }
+//    double Get_v0() { return v0; }
 
     int GetInvDeg() { return invP_deg; }
     int GetPolDeg() { return p_deg; }
 
-    cv::Mat_<double> Get_invP() { return invP; }
-    cv::Mat_<double> Get_P() { return p; }
+//    cv::Mat_<double> Get_invP() { return invP; }
+//    cv::Mat_<double> Get_P() { return p; }
 
     int GetFisheyeWidth() { return mWFisheye; }
     int GetFisheyeHeight() { return mHFisheye; }
@@ -130,8 +143,8 @@ public:
     double Get_fy() { return fy; }
     double Get_cx() { return cx; }
     double Get_cy() { return cy; }
-    double Get_invfx() { return 1.0/fx; }
-    double Get_invfy() { return 1.0/fy; }
+//    double Get_invfx() { return 1.0/fx; }
+//    double Get_invfy() { return 1.0/fy; }
 
     int GetCubeFaceWidth() { return mWCubeFace; }
     int GetCubeFaceHeight() { return mHCubeFace; }
@@ -140,24 +153,24 @@ public:
 
 
     //fisheye 2D image point and 3D scene point transformation
-	void ImgToWorld(cv::Point3_<double>& X,						        // 3D scene point
-		const cv::Point_<double>& m); 			                        // 2D image point
+//	void ImgToWorld(cv::Point3_<double>& X,						        // 3D scene point
+//		const cv::Point_<double>& m); 			                        // 2D image point
 
 	void ImgToWorld(double& x, double& y, double& z,					// 3D scene point
 		const double& u, const double& v); 			                    // 2D image point
 
-	void ImgToWorld(cv::Vec3f& X,						                // 3D scene point
-		const cv::Point2f& m); 			                                // 2D image point
-
-
-	void WorldToImg(const cv::Point3_<double>& X,			            // 3D scene point
-		cv::Point_<double>& m);			                                // 2D image point
-
-	void WorldToImg(const cv::Vec3d& X,			                        // 3D scene point
-		cv::Vec2d& m);			                                        // 2D image point
-
-	void WorldToImg(const cv::Vec3d& X,			                        // 3D scene point
-		cv::Vec2f& m);			                                        // 2D image point
+//	void ImgToWorld(cv::Vec3f& X,						                // 3D scene point
+//		const cv::Point2f& m); 			                                // 2D image point
+//
+//
+//	void WorldToImg(const cv::Point3_<double>& X,			            // 3D scene point
+//		cv::Point_<double>& m);			                                // 2D image point
+//
+//	void WorldToImg(const cv::Vec3d& X,			                        // 3D scene point
+//		cv::Vec2d& m);			                                        // 2D image point
+//
+//	void WorldToImg(const cv::Vec3d& X,			                        // 3D scene point
+//		cv::Vec2f& m);			                                        // 2D image point
 
 	void WorldToImg(const double& x, const double& y, const double& z,  // 3D scene point
 		double& u, double& v) const;							        // 2D image point
@@ -176,8 +189,8 @@ public:
     template<class T>
     eFace FaceInCubemap(const T &x, const T &y);
 
-    template<class T>
-    eFace FaceInCubemap(const T &x, const T &y, const T &z);
+//    template<class T>
+//    eFace FaceInCubemap(const T &x, const T &y, const T &z);
 
     //transform between rays and cubemap pixels
     eFace TransformCubemapToRays(cv::Vec3f &point, const cv::Point2f &pixel);
@@ -186,11 +199,11 @@ public:
 
     eFace TransformRaysToCubemap(float &up, float &vp, const cv::Vec3f &rigPt);
 
-    eFace TransformRaysToCubemap(cv::Point2f &pixel, const cv::Vec3f &rigPt);
-
-    eFace TransformRaysToCubemap(cv::Vec2f &pixel, const cv::Vec3f &rigPt);
-
-    eFace TransformRaysToCubemapFace(float &up, float &vp, const cv::Vec3f &rigPt);
+//    eFace TransformRaysToCubemap(cv::Point2f &pixel, const cv::Vec3f &rigPt);
+//
+//    eFace TransformRaysToCubemap(cv::Vec2f &pixel, const cv::Vec3f &rigPt);
+//
+//    eFace TransformRaysToCubemapFace(float &up, float &vp, const cv::Vec3f &rigPt);
 
     //transform rays to a given face
     void TransformRaysToTargetFace(float &up, float &vp, const cv::Vec3f &rigPt, const eFace face);
@@ -206,6 +219,13 @@ public:
     {
         const int i = std::floor(uCubemap / mWCubeFace), j = std::floor(vCubemap / mHCubeFace);
         u = uCubemap - i*mWCubeFace, v = vCubemap - j*mHCubeFace;
+
+#if 0
+        std::cout << "i = " << i << ", j = " << j << std::endl;
+        std::cout << "u = " << u << std::endl;
+        std::cout << "v = " << v << std::endl;
+        getchar();
+#endif
     }
 
     float GetEpipolarRadius(const cv::KeyPoint &key)
@@ -239,138 +259,185 @@ private:
 ////////////////////////////////////////
 //Impl of inline function members
 ///////////////////////////////////////
-inline void CamModelGeneral::ImgToWorld(cv::Point3_<double>& X,						// 3D scene point
-    const cv::Point_<double>& m) 			            // 2D image point
-{
-    //double invAff = c - d*e;
-    const double u_t = m.x - u0;
-    const double v_t = m.y - v0;
-    // inverse affine matrix image to sensor plane conversion
-    X.x = (1 * u_t - d * v_t) / this->invAffine;
-    X.y = (-e * u_t + c * v_t) / this->invAffine;
-    const double X2 = X.x * X.x;
-    const double Y2 = X.y * X.y;
-    X.z = -horner((double*)p.data, p_deg, sqrt(X2 + Y2));
+//inline void CamModelGeneral::ImgToWorld(cv::Point3_<double>& X,						// 3D scene point
+//    const cv::Point_<double>& m) 			            // 2D image point
+//{
+//    //double invAff = c - d*e;
+//    const double u_t = m.x - u0;
+//    const double v_t = m.y - v0;
+//    // inverse affine matrix image to sensor plane conversion
+//    X.x = (1 * u_t - d * v_t) / this->invAffine;
+//    X.y = (-e * u_t + c * v_t) / this->invAffine;
+//    const double X2 = X.x * X.x;
+//    const double Y2 = X.y * X.y;
+//    X.z = -horner((double*)p.data, p_deg, sqrt(X2 + Y2));
+//
+//    // normalize vectors spherically
+//    const double norm = sqrt(X2 + Y2 + X.z*X.z);
+//    X.x /= norm;
+//    X.y /= norm;
+//    X.z /= norm;
+//}
 
-    // normalize vectors spherically
-    const double norm = sqrt(X2 + Y2 + X.z*X.z);
-    X.x /= norm;
-    X.y /= norm;
-    X.z /= norm;
-}
+//inline void CamModelGeneral::ImgToWorld(double& x, double& y, double& z,						// 3D scene point
+//    const double& u, const double& v) 			    // 2D image point
+//{
+//    //double invAff = c - d*e;
+//    const double u_t = u - u0;
+//    const double v_t = v - v0;
+//    // inverse affine matrix image to sensor plane conversion
+//    x = (u_t - d * v_t) / this->invAffine;
+//    y = (-e * u_t + c * v_t) / this->invAffine;
+//    const double X2 = x * x;
+//    const double Y2 = y * y;
+//    z = -horner((double*)p.data, p_deg, sqrt(X2 + Y2));
+//
+//    // normalize vectors spherically
+//    double norm = sqrt(X2 + Y2 + z*z);
+//    x /= norm;
+//    y /= norm;
+//    z /= norm;
+//}
 
+// by xiongchao
 inline void CamModelGeneral::ImgToWorld(double& x, double& y, double& z,						// 3D scene point
-    const double& u, const double& v) 			    // 2D image point
+                                        const double& u, const double& v) 			    // 2D image point
 {
-    //double invAff = c - d*e;
-    const double u_t = u - u0;
-    const double v_t = v - v0;
-    // inverse affine matrix image to sensor plane conversion
-    x = (u_t - d * v_t) / this->invAffine;
-    y = (-e * u_t + c * v_t) / this->invAffine;
-    const double X2 = x * x;
-    const double Y2 = y * y;
-    z = -horner((double*)p.data, p_deg, sqrt(X2 + Y2));
+//    //double invAff = c - d*e;
+//    const double u_t = u - u0;
+//    const double v_t = v - v0;
+//    // inverse affine matrix image to sensor plane conversion
+//    x = (u_t - d * v_t) / this->invAffine;
+//    y = (-e * u_t + c * v_t) / this->invAffine;
+//    const double X2 = x * x;
+//    const double Y2 = y * y;
+//    z = -horner((double*)p.data, p_deg, sqrt(X2 + Y2));
+
+    cv::Point2f p2D(u, v);
+    cv::Point3f p3D = mpCamera->unproject(p2D);
 
     // normalize vectors spherically
-    double norm = sqrt(X2 + Y2 + z*z);
-    x /= norm;
-    y /= norm;
-    z /= norm;
+    double norm = sqrt(p3D.x * p3D.x + p3D.y * p3D.y + p3D.z * p3D.z);
+    x = p3D.x / norm;
+    y = p3D.y / norm;
+    z = p3D.y / norm;
 }
 
-inline void CamModelGeneral::ImgToWorld(cv::Vec3f& X,						// 3D scene point
-    const cv::Point2f& m) 			            // 2D image point
-{
-    //double invAff = c - d*e;
-    const double u_t = m.x - u0;
-    const double v_t = m.y - v0;
-    // inverse affine matrix image to sensor plane conversion
-    X(0) = (u_t - d * v_t) / this->invAffine;
-    X(1) = (-e * u_t + c * v_t) / this->invAffine;
-    const double X2 = X(0) * X(0);
-    const double Y2 = X(1) * X(1);
-    X(2) = -horner((double*)p.data, p_deg, sqrt(X2 + Y2));
+//inline void CamModelGeneral::ImgToWorld(cv::Vec3f& X,						// 3D scene point
+//    const cv::Point2f& m) 			            // 2D image point
+//{
+//    //double invAff = c - d*e;
+//    const double u_t = m.x - u0;
+//    const double v_t = m.y - v0;
+//    // inverse affine matrix image to sensor plane conversion
+//    X(0) = (u_t - d * v_t) / this->invAffine;
+//    X(1) = (-e * u_t + c * v_t) / this->invAffine;
+//    const double X2 = X(0) * X(0);
+//    const double Y2 = X(1) * X(1);
+//    X(2) = -horner((double*)p.data, p_deg, sqrt(X2 + Y2));
+//
+//    // normalize vectors spherically
+//    double norm = sqrt(X2 + Y2 + X(2)*X(2));
+//    X(0) /= norm;
+//    X(1) /= norm;
+//    X(2) /= norm;
+//}
+//
+//
+//inline void CamModelGeneral::WorldToImg(const cv::Point3_<double>& X,			// 3D scene point
+//    cv::Point_<double>& m)			// 2D image point
+//{
+//    double norm = sqrt(X.x*X.x + X.y*X.y);
+//
+//    if (norm == 0.0)
+//        norm = 1e-14;
+//
+//    const double theta = atan(-X.z / norm);
+//    const double rho = horner((double*)invP.data, invP_deg, theta);
+//
+//    const double uu = X.x / norm * rho;
+//    const double vv = X.y / norm * rho;
+//
+//    m.x = uu*c + vv*d + u0;
+//    m.y = uu*e + vv + v0;
+//}
+//
+//inline void CamModelGeneral::WorldToImg(const cv::Vec3d& X,			// 3D scene point
+//    cv::Vec2d& m)			// 2D image point
+//{
+//
+//    double norm = cv::sqrt(X(0)*X(0) + X(1)*X(1));
+//
+//    if (norm == 0.0)
+//        norm = 1e-14;
+//
+//    const double theta = atan(-X(2) / norm);
+//    const double rho = horner((double*)invP.data, invP_deg, theta);
+//
+//    const double uu = X(0) / norm * rho;
+//    const double vv = X(1) / norm * rho;
+//
+//    m(0) = uu*c + vv*d + u0;
+//    m(1) = uu*e + vv + v0;
+//}
+//
+//inline void CamModelGeneral::WorldToImg(const cv::Vec3d& X,			// 3D scene point
+//    cv::Vec2f& m)			// 2D image point
+//{
+//    double norm = cv::sqrt(X(0)*X(0) + X(1)*X(1));
+//
+//    if (norm == 0.0)
+//        norm = 1e-14;
+//
+//    const double theta = atan(-X(2) / norm);
+//
+//    const double rho = horner((double*)invP.data, invP_deg, theta);
+//
+//    const double uu = X(0) / norm * rho;
+//    const double vv = X(1) / norm * rho;
+//
+//    m(0) = uu*c + vv*d + u0;
+//    m(1) = uu*e + vv + v0;
+//}
 
-    // normalize vectors spherically
-    double norm = sqrt(X2 + Y2 + X(2)*X(2));
-    X(0) /= norm;
-    X(1) /= norm;
-    X(2) /= norm;
-}
+//inline void CamModelGeneral::WorldToImg(const double& x, const double& y, const double& z,    // 3D scene point
+//    double& u, double& v) const							 // 2D image point
+//{
+//    double norm = sqrt(x*x + y*y);
+//    if (norm == 0.0)
+//        norm = 1e-14;
+//
+//    const double theta = atan(-z / norm);
+//    const double rho = horner((double*)invP.data, invP_deg, theta);
+//
+//    const double uu = x / norm * rho;
+//    const double vv = y / norm * rho;
+//
+//    u = uu*c + vv*d + u0;
+//    v = uu*e + vv + v0;
+//}
 
-
-inline void CamModelGeneral::WorldToImg(const cv::Point3_<double>& X,			// 3D scene point
-    cv::Point_<double>& m)			// 2D image point
-{
-    double norm = sqrt(X.x*X.x + X.y*X.y);
-
-    if (norm == 0.0)
-        norm = 1e-14;
-
-    const double theta = atan(-X.z / norm);
-    const double rho = horner((double*)invP.data, invP_deg, theta);
-
-    const double uu = X.x / norm * rho;
-    const double vv = X.y / norm * rho;
-
-    m.x = uu*c + vv*d + u0;
-    m.y = uu*e + vv + v0;
-}
-
-inline void CamModelGeneral::WorldToImg(const cv::Vec3d& X,			// 3D scene point
-    cv::Vec2d& m)			// 2D image point
-{
-
-    double norm = cv::sqrt(X(0)*X(0) + X(1)*X(1));
-
-    if (norm == 0.0)
-        norm = 1e-14;
-
-    const double theta = atan(-X(2) / norm);
-    const double rho = horner((double*)invP.data, invP_deg, theta);
-
-    const double uu = X(0) / norm * rho;
-    const double vv = X(1) / norm * rho;
-
-    m(0) = uu*c + vv*d + u0;
-    m(1) = uu*e + vv + v0;
-}
-
-inline void CamModelGeneral::WorldToImg(const cv::Vec3d& X,			// 3D scene point
-    cv::Vec2f& m)			// 2D image point
-{
-    double norm = cv::sqrt(X(0)*X(0) + X(1)*X(1));
-
-    if (norm == 0.0)
-        norm = 1e-14;
-
-    const double theta = atan(-X(2) / norm);
-
-    const double rho = horner((double*)invP.data, invP_deg, theta);
-
-    const double uu = X(0) / norm * rho;
-    const double vv = X(1) / norm * rho;
-
-    m(0) = uu*c + vv*d + u0;
-    m(1) = uu*e + vv + v0;
-}
-
+// by xiongchao
 inline void CamModelGeneral::WorldToImg(const double& x, const double& y, const double& z,    // 3D scene point
-    double& u, double& v) const							 // 2D image point
+                                        double& u, double& v) const							 // 2D image point
 {
-    double norm = sqrt(x*x + y*y);
-    if (norm == 0.0)
-        norm = 1e-14;
+    cv::Point3f p3D(x, y, z);
+    cv::Point2f p2D = mpCamera->project(p3D);
+    u = p2D.x;
+    v = p2D.y;
 
-    const double theta = atan(-z / norm);
-    const double rho = horner((double*)invP.data, invP_deg, theta);
-
-    const double uu = x / norm * rho;
-    const double vv = y / norm * rho;
-
-    u = uu*c + vv*d + u0;
-    v = uu*e + vv + v0;
+//    double norm = sqrt(x*x + y*y);
+//    if (norm == 0.0)
+//        norm = 1e-14;
+//
+//    const double theta = atan(-z / norm);
+//    const double rho = horner((double*)invP.data, invP_deg, theta);
+//
+//    const double uu = x / norm * rho;
+//    const double vv = y / norm * rho;
+//
+//    u = uu*c + vv*d + u0;
+//    v = uu*e + vv + v0;
 }
 
 //assume pinhole faces share the same focal length and image size
@@ -469,27 +536,27 @@ inline CamModelGeneral::eFace CamModelGeneral::FaceInCubemap(const T &x, const T
     return face;
 }
 
-template<class T>
-inline CamModelGeneral::eFace CamModelGeneral::FaceInCubemap(const T &x, const T &y, const T &z)
-{
-    //choose different face according to (x, y, z)
-    if(z > 0 && x/z <= 1 && x/z >= -1 && y/z <=1 && y/z >= -1)
-        return FRONT_FACE;
-
-    if(x > 0 && y/x <= 1 && y/x >= -1 && z/x <=1 && z/x >= -1)
-        return RIGHT_FACE;
-    
-    if(x < 0 && y/(-x) <= 1 && y/(-x) >= -1 && z/(-x) <=1 && z/(-x) >= -1)
-        return LEFT_FACE;
-
-    if(y > 0 && x/y <= 1 && x/y >= -1 && z/y <=1 && z/y >= -1)
-        return LOWER_FACE;
-
-    if(y < 0 && x/(-y) <= 1 && x/(-y) >= -1 && z/(-y) <=1 && z/(-y) >= -1)
-        return UPPER_FACE;
-
-    return UNKNOWN_FACE;
-}
+//template<class T>
+//inline CamModelGeneral::eFace CamModelGeneral::FaceInCubemap(const T &x, const T &y, const T &z)
+//{
+//    //choose different face according to (x, y, z)
+//    if(z > 0 && x/z <= 1 && x/z >= -1 && y/z <=1 && y/z >= -1)
+//        return FRONT_FACE;
+//
+//    if(x > 0 && y/x <= 1 && y/x >= -1 && z/x <=1 && z/x >= -1)
+//        return RIGHT_FACE;
+//
+//    if(x < 0 && y/(-x) <= 1 && y/(-x) >= -1 && z/(-x) <=1 && z/(-x) >= -1)
+//        return LEFT_FACE;
+//
+//    if(y > 0 && x/y <= 1 && x/y >= -1 && z/y <=1 && z/y >= -1)
+//        return LOWER_FACE;
+//
+//    if(y < 0 && x/(-y) <= 1 && x/(-y) >= -1 && z/(-y) <=1 && z/(-y) >= -1)
+//        return UPPER_FACE;
+//
+//    return UNKNOWN_FACE;
+//}
 
 inline CamModelGeneral::eFace CamModelGeneral::TransformCubemapToRays(cv::Vec3f &point, const cv::Point2f &pixel)
 {

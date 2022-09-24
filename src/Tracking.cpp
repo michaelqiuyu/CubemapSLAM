@@ -42,6 +42,9 @@
 #include <chrono>
 #include <ctime>
 #include <climits>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 extern unsigned int frame_counter;
 

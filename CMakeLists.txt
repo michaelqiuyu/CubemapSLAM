@@ -19,6 +19,7 @@ find_package(Pangolin REQUIRED)
 include_directories(
     ${PROJECT_SOURCE_DIR}
     ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/include/CameraModels
     ${PROJECT_SOURCE_DIR}/ThirdParty/DBoW2/
     ${PROJECT_SOURCE_DIR}/ThirdParty/g2o/
     ${Pangolin_INCLUDE_DIRS}
@@ -51,6 +52,12 @@ add_library(${PROJECT_NAME} SHARED
     src/LoopClosing.cpp
     src/Sim3Solver.cpp
     src/PnPsolver.cpp
+
+    include/CameraModels/GeometricCamera.h
+    include/CameraModels/Pinhole.h
+    include/CameraModels/KannalaBrandt8.h
+    src/CameraModels/Pinhole.cpp
+    src/CameraModels/KannalaBrandt8.cpp
 )
 
 target_link_libraries(${PROJECT_NAME}
@@ -72,3 +79,7 @@ add_executable(cubemap_lafida
     Examples/cubemap_lafida.cpp)
 target_link_libraries(cubemap_lafida ${PROJECT_NAME})
 
+# create test data
+add_executable(create_data
+        Examples/create_data.cpp)
+target_link_libraries(create_data ${PROJECT_NAME})

@@ -242,6 +242,10 @@ float Initializer::CheckEssiential(const cv::Mat &E21, vector<bool> &vbMatchesIn
         float unitVectorSigma = sigma * CamModelGeneral::GetCamera()->GetVectorSigma(mvKeys2[mvMatches12[i].second], cv::Vec3f(a2,b2,c2));
         float invSigmaSquare = 1.0f/(unitVectorSigma*unitVectorSigma);
 
+#if 0
+        std::cout << "squareDist1 = " << squareDist1 << ", unitVectorSigma = " << unitVectorSigma << ", chiSquare1 = " << squareDist1*invSigmaSquare << std::endl;
+#endif
+
         const float chiSquare1 = squareDist1*invSigmaSquare;
 
         if(chiSquare1>th)
