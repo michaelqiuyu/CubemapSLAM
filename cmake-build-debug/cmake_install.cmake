@@ -1,4 +1,4 @@
-# Install script for directory: /home/xiongchao/文档/CubemapSLAM
+# Install script for directory: /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

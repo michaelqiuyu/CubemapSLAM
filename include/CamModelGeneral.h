@@ -425,19 +425,6 @@ inline void CamModelGeneral::WorldToImg(const double& x, const double& y, const 
     cv::Point2f p2D = mpCamera->project(p3D);
     u = p2D.x;
     v = p2D.y;
-
-//    double norm = sqrt(x*x + y*y);
-//    if (norm == 0.0)
-//        norm = 1e-14;
-//
-//    const double theta = atan(-z / norm);
-//    const double rho = horner((double*)invP.data, invP_deg, theta);
-//
-//    const double uu = x / norm * rho;
-//    const double vv = y / norm * rho;
-//
-//    u = uu*c + vv*d + u0;
-//    v = uu*e + vv + v0;
 }
 
 //assume pinhole faces share the same focal length and image size
@@ -527,6 +514,10 @@ inline CamModelGeneral::eFace CamModelGeneral::FaceInCubemap(const T &x, const T
 {
     eFace face = UNKNOWN_FACE; 
     T i = x / mWCubeFace, j = y / mHCubeFace;
+
+#if 1
+    std::cout << "i = " << i << ", j = " << j << ", x = " << x << ", y = " << y << std::endl;
+#endif
 
     if(i >= 0 && i < 1 && j >= 1 && j < 2) face = LEFT_FACE;
     else if(i >= 1 && i < 2 && j >= 0 && j < 1) face = UPPER_FACE;

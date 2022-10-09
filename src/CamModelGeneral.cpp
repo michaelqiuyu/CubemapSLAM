@@ -296,12 +296,25 @@ void CamModelGeneral::CubemapToFisheye(double &uf, double &vf, const double &up,
 
     x = (i - cx) * z / fx;
     y = (j - cy) * z / fy;
+
+#if 1
+    std::cout << "face = " << face << std::endl;
+    std::cout << "x = " << x << ", y = " << y <<std::endl;
+#endif
+
     const cv::Vec3d localPt(x, y, z);
     cv::Vec3d rigPt;
     double &_x = rigPt(0), &_y = rigPt(1), &_z = rigPt(2);
 
     cvtFacesToRig<double>(rigPt, localPt, face);
+#if 1
+    std::cout << "_x = " << _x << ", _y = " << _y << ", _z = " << _z << std::endl;
+#endif
+
     WorldToImg(_x, _y, _z, uf, vf);
+#if 1
+    std::cout << "uf = " << uf << ", vf = " << vf << std::endl;
+#endif
     if(uf < 0 || uf >= mWFisheye || vf < 0 || vf >= mHFisheye)
     {
         uf = -1;

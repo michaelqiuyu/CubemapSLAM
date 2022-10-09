@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/xiongchao/文档/CubemapSLAM/Examples/create_data.cpp
+/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/Examples/create_data.cpp
 iostream
 -
 opencv2/opencv.hpp

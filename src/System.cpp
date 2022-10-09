@@ -328,7 +328,24 @@ void System::CreateUndistortRectifyMap()
         for(int x = 0; x < width3; ++x)
         {
             double u, v;
+
+#if 1
+            x = 975, y = 660;
+#endif
+
             CamModelGeneral::GetCamera()->CubemapToFisheye(u, v, static_cast<double>(x), static_cast<double>(y));
+
+#if 1
+            std::cout << "u = " << u << "v = " << v << std::endl;
+            getchar();
+
+#endif
+
+#if 0
+            std::cout << "mK = " << CamModelGeneral::GetCamera()->mK << std::endl;
+            getchar();
+#endif
+
             // on some face but doesn't map to a fisheye valid region
             if(u < 0 || v < 0 || u >= Iw || v >= Ih)
                 continue;
@@ -336,6 +353,12 @@ void System::CreateUndistortRectifyMap()
             mMap2.at<float>(y, x) = static_cast<float>(v);
         }
     }
+
+#if 1
+    cv::Mat map1 = mMap1.clone(), map2 = mMap2.clone();
+    cv::imwrite("/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/dataset/wuhan_avp/rear/map1.png", map1);
+    cv::imwrite("/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/dataset/wuhan_avp/rear/map1.png", map1);
+#endif
 }
 
 //convert fisheye image to cubemap
@@ -367,6 +390,14 @@ void System::CvtFisheyeToCubeMap_reverseQuery_withInterpolation(cv::Mat &cubemap
     cv::remap(fisheyeImg, cubemapImg_right, mMap1_right, mMap2_right, interpolation, borderType, borderValue);
     cv::remap(fisheyeImg, cubemapImg_upper, mMap1_upper, mMap2_upper, interpolation, borderType, borderValue);
     cv::remap(fisheyeImg, cubemapImg_lower, mMap1_lower, mMap2_lower, interpolation, borderType, borderValue);
+
+#if 1
+    cv::imshow("cubemapImg_front", cubemapImg_front);
+    cv::imshow("cubemapImg_left", cubemapImg_left);
+    cv::imshow("cubemapImg_right", cubemapImg_right);
+    cv::imshow("cubemapImg_upper", cubemapImg_upper);
+    cv::imshow("cubemapImg_lower", cubemapImg_lower);
+#endif
 }
 
 //convert fisheye to cubemap with pCamModel->FisheyeToCubemap

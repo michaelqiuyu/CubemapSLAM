@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -Wall -O3 -march=native -g -fPIC
 
 CXX_DEFINES = -DCubemapSLAM_EXPORTS -DWITH_BOW2
 
-CXX_INCLUDES = -I/home/xiongchao/文档/CubemapSLAM -I/home/xiongchao/文档/CubemapSLAM/include -I/home/xiongchao/文档/CubemapSLAM/include/CameraModels -I/home/xiongchao/文档/CubemapSLAM/ThirdParty/DBoW2 -I/home/xiongchao/文档/CubemapSLAM/ThirdParty/g2o -isystem /usr/include/eigen3 -isystem /usr/local/include/opencv 
+CXX_INCLUDES = -I/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my -I/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/include -I/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/include/CameraModels -I/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/ThirdParty/DBoW2 -I/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/ThirdParty/g2o -isystem /usr/include/eigen3 -isystem /usr/local/include/opencv 
 

@@ -12,7 +12,6 @@ void create_image() {
     double timestamp = 1515653813.0;
     int count = 1;
 
-
     while (capture.read(im)) {
         std::string image_count;
         if (count < 10)

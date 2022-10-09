@@ -63,10 +63,10 @@ RM = /home/xiongchao/software/clion2020/clion-2020.2.5/bin/cmake/linux/bin/cmake
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xiongchao/文档/CubemapSLAM
+CMAKE_SOURCE_DIR = /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xiongchao/文档/CubemapSLAM/cmake-build-debug
+CMAKE_BINARY_DIR = /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CubemapSLAM.dir/depend.make
@@ -79,302 +79,302 @@ include CMakeFiles/CubemapSLAM.dir/flags.make
 
 CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.o: ../src/CamModelGeneral.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/CamModelGeneral.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/CamModelGeneral.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/CamModelGeneral.cpp > CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/CamModelGeneral.cpp > CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/CamModelGeneral.cpp -o CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/CamModelGeneral.cpp -o CMakeFiles/CubemapSLAM.dir/src/CamModelGeneral.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.o: ../src/Frame.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/Frame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Frame.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/Frame.cpp > CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Frame.cpp > CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/Frame.cpp -o CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Frame.cpp -o CMakeFiles/CubemapSLAM.dir/src/Frame.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/System.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/System.cpp.o: ../src/System.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/System.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/System.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/System.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/System.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/System.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/System.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/System.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/System.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/System.cpp > CMakeFiles/CubemapSLAM.dir/src/System.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/System.cpp > CMakeFiles/CubemapSLAM.dir/src/System.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/System.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/System.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/System.cpp -o CMakeFiles/CubemapSLAM.dir/src/System.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/System.cpp -o CMakeFiles/CubemapSLAM.dir/src/System.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.o: ../src/Tracking.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/Tracking.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Tracking.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/Tracking.cpp > CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Tracking.cpp > CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/Tracking.cpp -o CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Tracking.cpp -o CMakeFiles/CubemapSLAM.dir/src/Tracking.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.o: ../src/ORBExtractor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/ORBExtractor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/ORBExtractor.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/ORBExtractor.cpp > CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/ORBExtractor.cpp > CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/ORBExtractor.cpp -o CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/ORBExtractor.cpp -o CMakeFiles/CubemapSLAM.dir/src/ORBExtractor.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.o: ../src/Initializer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/Initializer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Initializer.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/Initializer.cpp > CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Initializer.cpp > CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/Initializer.cpp -o CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Initializer.cpp -o CMakeFiles/CubemapSLAM.dir/src/Initializer.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.o: ../src/ORBMatcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/ORBMatcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/ORBMatcher.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/ORBMatcher.cpp > CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/ORBMatcher.cpp > CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/ORBMatcher.cpp -o CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/ORBMatcher.cpp -o CMakeFiles/CubemapSLAM.dir/src/ORBMatcher.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/Map.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/Map.cpp.o: ../src/Map.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Map.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Map.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/Map.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Map.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Map.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Map.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/Map.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/Map.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/Map.cpp > CMakeFiles/CubemapSLAM.dir/src/Map.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Map.cpp > CMakeFiles/CubemapSLAM.dir/src/Map.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/Map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/Map.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/Map.cpp -o CMakeFiles/CubemapSLAM.dir/src/Map.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Map.cpp -o CMakeFiles/CubemapSLAM.dir/src/Map.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.o: ../src/MapPoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/MapPoint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/MapPoint.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/MapPoint.cpp > CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/MapPoint.cpp > CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/MapPoint.cpp -o CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/MapPoint.cpp -o CMakeFiles/CubemapSLAM.dir/src/MapPoint.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.o: ../src/KeyFrame.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/KeyFrame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/KeyFrame.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/KeyFrame.cpp > CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/KeyFrame.cpp > CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/KeyFrame.cpp -o CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/KeyFrame.cpp -o CMakeFiles/CubemapSLAM.dir/src/KeyFrame.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.o: ../src/LocalMapping.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/LocalMapping.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/LocalMapping.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/LocalMapping.cpp > CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/LocalMapping.cpp > CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/LocalMapping.cpp -o CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/LocalMapping.cpp -o CMakeFiles/CubemapSLAM.dir/src/LocalMapping.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.o: ../src/Viewer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/Viewer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Viewer.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/Viewer.cpp > CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Viewer.cpp > CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/Viewer.cpp -o CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Viewer.cpp -o CMakeFiles/CubemapSLAM.dir/src/Viewer.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.o: ../src/MapDrawer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/MapDrawer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/MapDrawer.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/MapDrawer.cpp > CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/MapDrawer.cpp > CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/MapDrawer.cpp -o CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/MapDrawer.cpp -o CMakeFiles/CubemapSLAM.dir/src/MapDrawer.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.o: ../src/FrameDrawer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/FrameDrawer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/FrameDrawer.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/FrameDrawer.cpp > CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/FrameDrawer.cpp > CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/FrameDrawer.cpp -o CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/FrameDrawer.cpp -o CMakeFiles/CubemapSLAM.dir/src/FrameDrawer.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.o: ../src/Optimizer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/Optimizer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Optimizer.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/Optimizer.cpp > CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Optimizer.cpp > CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/Optimizer.cpp -o CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Optimizer.cpp -o CMakeFiles/CubemapSLAM.dir/src/Optimizer.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.o: ../src/g2o_cubemap_vertices_edges.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/g2o_cubemap_vertices_edges.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/g2o_cubemap_vertices_edges.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/g2o_cubemap_vertices_edges.cpp > CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/g2o_cubemap_vertices_edges.cpp > CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/g2o_cubemap_vertices_edges.cpp -o CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/g2o_cubemap_vertices_edges.cpp -o CMakeFiles/CubemapSLAM.dir/src/g2o_cubemap_vertices_edges.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.o: ../src/Converter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/Converter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Converter.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/Converter.cpp > CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Converter.cpp > CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/Converter.cpp -o CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Converter.cpp -o CMakeFiles/CubemapSLAM.dir/src/Converter.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.o: ../src/KeyFrameDatabase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/KeyFrameDatabase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/KeyFrameDatabase.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/KeyFrameDatabase.cpp > CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/KeyFrameDatabase.cpp > CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/KeyFrameDatabase.cpp -o CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/KeyFrameDatabase.cpp -o CMakeFiles/CubemapSLAM.dir/src/KeyFrameDatabase.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.o: ../src/LoopClosing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/LoopClosing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/LoopClosing.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/LoopClosing.cpp > CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/LoopClosing.cpp > CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/LoopClosing.cpp -o CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/LoopClosing.cpp -o CMakeFiles/CubemapSLAM.dir/src/LoopClosing.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.o: ../src/Sim3Solver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/Sim3Solver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Sim3Solver.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/Sim3Solver.cpp > CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Sim3Solver.cpp > CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/Sim3Solver.cpp -o CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/Sim3Solver.cpp -o CMakeFiles/CubemapSLAM.dir/src/Sim3Solver.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.o: ../src/PnPsolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/PnPsolver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/PnPsolver.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/PnPsolver.cpp > CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/PnPsolver.cpp > CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/PnPsolver.cpp -o CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/PnPsolver.cpp -o CMakeFiles/CubemapSLAM.dir/src/PnPsolver.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.o: ../src/CameraModels/Pinhole.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/CameraModels/Pinhole.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/CameraModels/Pinhole.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/CameraModels/Pinhole.cpp > CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/CameraModels/Pinhole.cpp > CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/CameraModels/Pinhole.cpp -o CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/CameraModels/Pinhole.cpp -o CMakeFiles/CubemapSLAM.dir/src/CameraModels/Pinhole.cpp.s
 
 CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.o: CMakeFiles/CubemapSLAM.dir/flags.make
 CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.o: ../src/CameraModels/KannalaBrandt8.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.o -c /home/xiongchao/文档/CubemapSLAM/src/CameraModels/KannalaBrandt8.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.o -c /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/CameraModels/KannalaBrandt8.cpp
 
 CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/文档/CubemapSLAM/src/CameraModels/KannalaBrandt8.cpp > CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/CameraModels/KannalaBrandt8.cpp > CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.i
 
 CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/文档/CubemapSLAM/src/CameraModels/KannalaBrandt8.cpp -o CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/src/CameraModels/KannalaBrandt8.cpp -o CMakeFiles/CubemapSLAM.dir/src/CameraModels/KannalaBrandt8.cpp.s
 
 # Object files for target CubemapSLAM
 CubemapSLAM_OBJECTS = \
@@ -466,7 +466,7 @@ CubemapSLAM_EXTERNAL_OBJECTS =
 ../lib/libCubemapSLAM.so: /usr/lib/x86_64-linux-gnu/libjpeg.so
 ../lib/libCubemapSLAM.so: /usr/local/lib/libtiff.so
 ../lib/libCubemapSLAM.so: CMakeFiles/CubemapSLAM.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX shared library ../lib/libCubemapSLAM.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX shared library ../lib/libCubemapSLAM.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CubemapSLAM.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -479,6 +479,6 @@ CMakeFiles/CubemapSLAM.dir/clean:
 .PHONY : CMakeFiles/CubemapSLAM.dir/clean
 
 CMakeFiles/CubemapSLAM.dir/depend:
-	cd /home/xiongchao/文档/CubemapSLAM/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiongchao/文档/CubemapSLAM /home/xiongchao/文档/CubemapSLAM /home/xiongchao/文档/CubemapSLAM/cmake-build-debug /home/xiongchao/文档/CubemapSLAM/cmake-build-debug /home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles/CubemapSLAM.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug /home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles/CubemapSLAM.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CubemapSLAM.dir/depend
 

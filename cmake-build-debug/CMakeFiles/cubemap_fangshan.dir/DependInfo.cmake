@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/xiongchao/文档/CubemapSLAM/Examples/cubemap_fangshan.cpp" "/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles/cubemap_fangshan.dir/Examples/cubemap_fangshan.cpp.o"
+  "/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/Examples/cubemap_fangshan.cpp" "/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles/cubemap_fangshan.dir/Examples/cubemap_fangshan.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -26,7 +26,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/xiongchao/文档/CubemapSLAM/cmake-build-debug/CMakeFiles/CubemapSLAM.dir/DependInfo.cmake"
+  "/home/xiongchao/studying/SLAM/VSLAM/cubamapSLAM/code/CubemapSLAM_my/cmake-build-debug/CMakeFiles/CubemapSLAM.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

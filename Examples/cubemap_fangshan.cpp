@@ -128,6 +128,10 @@ int main(int argc, char **argv)
         std::string fisheyeImgName = fisheyeImgPath + fisheyeImgNames[idx];
         cv::Mat fisheyeImg = cv::imread(fisheyeImgName.c_str(), cv::IMREAD_GRAYSCALE);
 
+#if 1
+        cv::imshow("fisheyeImg", fisheyeImg);
+#endif
+
         std::cout << "reading image " << fisheyeImgNames[idx] << std::endl;
         if(!fisheyeImg.data)
         {
@@ -136,15 +140,15 @@ int main(int argc, char **argv)
         }
         cubemapSLAM.CvtFisheyeToCubeMap_reverseQuery_withInterpolation(cubemapImg, fisheyeImg, cv::INTER_LINEAR);
         
-        std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
-        //track cubemap
-        cubemapSLAM.TrackCubemap(cubemapImg, cubemapMask, vTimestamps[idx]); 
-
-        std::chrono::steady_clock::time_point t2 = std::chrono::steady_clock::now();
-
-        double ttrack= std::chrono::duration_cast<std::chrono::duration<double> >(t2 - t1).count();
-
-        vTimesTrack[idx]=ttrack;
+//        std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
+//        //track cubemap
+//        cubemapSLAM.TrackCubemap(cubemapImg, cubemapMask, vTimestamps[idx]);
+//
+//        std::chrono::steady_clock::time_point t2 = std::chrono::steady_clock::now();
+//
+//        double ttrack= std::chrono::duration_cast<std::chrono::duration<double> >(t2 - t1).count();
+//
+//        vTimesTrack[idx]=ttrack;
     }
     // Stop all threads
     cubemapSLAM.Shutdown();

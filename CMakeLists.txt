@@ -83,3 +83,8 @@ target_link_libraries(cubemap_lafida ${PROJECT_NAME})
 add_executable(create_data
         Examples/create_data.cpp)
 target_link_libraries(create_data ${PROJECT_NAME})
+
+## create test data
+#add_executable(test_cube_division
+#        Test/test_cube_division.cpp)
+#target_link_libraries(test_cube_division ${PROJECT_NAME})
